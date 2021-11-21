@@ -5,7 +5,7 @@ describe Cat do
 
   it 'does' do
     expect_save_callbacks(1) do
-      subject.update(answers_to: 'Pickles')
+      Cat.find(subject.id).update(answers_to: 'Pickles')
     end
   end
 
@@ -21,7 +21,7 @@ describe Cat do
 
     it 'does' do
       expect_save_callbacks(1) do
-        subject.update(answers_to: 'Pickles')
+        Cat.find(subject.id).update(answers_to: 'Pickles')
       end
     end
   end
